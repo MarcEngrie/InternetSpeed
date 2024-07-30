@@ -1,0 +1,16 @@
+[Unit]
+Description=InternetSpeed
+After=network.target
+Requires=network.target 
+StartLimitInterval=300
+StartLimitBurst=3
+
+[Service]
+ExecStart=/home/pi/InternetSpeed/bin/InternetSpeed.sh start
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=60
+SuccessExitStatus=0 1
+
+[Install]
+WantedBy=multi-user.target

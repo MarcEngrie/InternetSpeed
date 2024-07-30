@@ -1,0 +1,30 @@
+LOCATION:
+  Location: <location of test>
+
+PROVIDER:
+  Domain: <FQDN of provider>
+  Name: <Provider name>
+
+SMTP:
+  Enabled: Yes
+  # smtp info
+  Server: "<SMTP server FQDN>"
+  Port: 587
+  TLS: True
+  CA: False
+  Login: "<login name>"
+  Password: "<password>"
+  From: "<emailadress of sender>"
+  To: "<emailaddress of receiver"
+
+SFTP:
+  Enabled: Yes
+  Server: "<IP-address of SFTP server>"
+  Port: 22
+  Login: <login name>
+  Password: <password>
+  RemoteDir: "<remote directory where test can put file>"
+  #in kiloBytes
+  FileSize: 1024
+  # in minutes
+  TimeInterval : 15
